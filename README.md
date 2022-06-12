@@ -14,9 +14,18 @@
 
 
 ## 编译环境
-Visual Studio 2022
-.Net 5.0
+Visual Studio 2022 + .Net 5.0
 
+
+## 使用前准备
+1. 下载[ComWechatBot的必要文件](https://github.com/ljc545w/ComWeChatRobot/tree/master/Release)
+2. 使用管理员命令行注册或卸载com组件
+```
+# 安装
+regsvr32 CWeChatRobot.exe
+# 卸载
+regsvr32 /u CWeChatRobot.exe
+```
 
 ## 更多功能
 后续计划功能：
