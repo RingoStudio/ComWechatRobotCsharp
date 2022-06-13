@@ -423,7 +423,6 @@ INIT_FINISHED:
                     var sender = msg.ContainsKey(MSG_SENDER) ? msg[MSG_SENDER] : "";
                     var wxid = msg.ContainsKey(MSG_WXID) ? msg[MSG_WXID] : "";
                     enums.RoomType roomType = enums.RoomType.Private;
-                    Console.WriteLine(String.Join(",", message));
                     if (msgType == enums.MessageType.ServiceGroup)
                     {
                         roomType = enums.RoomType.Service;
@@ -528,15 +527,14 @@ INIT_FINISHED:
                         {
                             if (msg.content.StartsWith("@"))
                                 msg.content = msg.content.Split(MSG_NICK_SPLITER).Last();
-                            wx.CSendAtText(msg.chatroomID, msg.wxIDs.First(), msg.content);
+                            wx.CSendAtText(msg.chatroomID, msg.wxIDs.First(), msg.content, 0);
                         }
                         else if (msg.wxIDs.Count > 1)
                         {
                             var array = new object[msg.wxIDs.Count];
                             for (int i = 0; i < msg.wxIDs.Count; i++)
                                 array[i] = msg.wxIDs[i];
-                            msg.content = msg.content.Replace(MSG_NICK_SPLITER, " ");
-                            wx.CSendAtText(msg.chatroomID, array, (msg.simpleAt ? "" : "\n----------\n") + msg.content);
+                            wx.CSendAtText(msg.chatroomID, array, msg.content,0);
                         }
                         utils.ConsoleLog.Processing(TAG, $"TYPE: AT, TO: {msg.chatroomID}, AT: {String.Join("/", msg.wxIDs)} CONTENT: {msg.content}");
                         break;
@@ -582,7 +580,6 @@ INIT_FINISHED:
             if (string.IsNullOrEmpty(chatroomID) || wxIDs == null || wxIDs.Count == 0) return;
             var target = isLow ? messages_low : messages_high;
             model.MessageBody msg = new model.MessageBody(chatroomID, wxIDs, content, enums.MessageType.AT);
-            msg.simpleAt = true;
             target.Enqueue(msg);
         }
         private void AddSendMessage(string content,
