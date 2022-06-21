@@ -22,9 +22,9 @@ Visual Studio 2022 + .Net 5.0
 2. 使用管理员命令行注册或卸载com组件
 ```
 # 安装
-regsvr32 CWeChatRobot.exe
+CWeChatRobot.exe /regserver
 # 卸载
-regsvr32 /u CWeChatRobot.exe
+CWeChatRobot.exe /unregserver
 ```
 
 ## 更多功能
@@ -39,7 +39,8 @@ regsvr32 /u CWeChatRobot.exe
 ## 更新记录
 #### 2022.06.13
 - 首次发布
-
+#### 2022.06.14
+- 跟进ComWechatRobot更改At消息参数，在本项目中，为了最终呈现的消息文本的整洁，所有的@昵称在传入时添加，而不是由Robot自动在最前面添加。
 
 ## 免责声明
 代码仅供交流学习使用，请勿用于非法用途和商业用途！如因此产生任何法律纠纷，均与作者无关！
