@@ -8,13 +8,18 @@ namespace RS_WXBOT_COM.enums
 {
     public enum MessageType
     {
+        /// <summary>
+        /// 文字消息
+        /// </summary>
         Text = 1,
-
+        /// <summary>
+        /// 图片消息
+        /// </summary>
         Image = 3,
 
         USER_LIST_INFO = 1004,
-        FILE =1005,
-        AT =1006,
+        FILE = 1005,
+        AT = 1006,
         /// <summary>
         /// 服务号群发的消息
         /// </summary>
@@ -28,7 +33,9 @@ namespace RS_WXBOT_COM.enums
         USER_INFO = 6500,
         USER_INFO_1 = 6550,
         DEFAULT = 9999,
-
-        UNKNOW=-1,
+        /// <summary>
+        /// 未定义
+        /// </summary>
+        UNKNOW = -1,
     }
 }

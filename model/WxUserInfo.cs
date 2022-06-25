@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace RS_WXBOT_COM.model
 {
+    /// <summary>
+    /// 微信成员信息类
+    /// </summary>
     public class WxUserInfo
     {
         /// <summary>

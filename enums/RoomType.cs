@@ -28,7 +28,9 @@ namespace RS_WXBOT_COM.enums
         /// 系统信息
         /// </summary>
         System=999,
-
+        /// <summary>
+        /// 未定义
+        /// </summary>
         UNKNOW=99999,
     }
 }
