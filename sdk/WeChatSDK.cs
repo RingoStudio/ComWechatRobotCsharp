@@ -461,7 +461,7 @@ INIT_FINISHED:
                     {
                         roomType = enums.RoomType.Service;
                     }
-                    else if (sender != wxid)
+                    else if (sender.EndsWith("@chatroom"))
                     {
                         roomType = enums.RoomType.Group;
                     }
