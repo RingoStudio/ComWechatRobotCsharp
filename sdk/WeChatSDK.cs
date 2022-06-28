@@ -49,7 +49,7 @@ namespace RS_WXBOT_COM.sdk
         private Random intervalRand = new Random();
 
         public const string MARK_MSG_TYPE = "type";
-        public const string MARK_MSG_SENDER = "sender";
+        public const string MARK_MSG_SENDER = "from";
         public const string MARK_MSG_WXID = "wxid";
         public const string MARK_MSG_MESSAGE = "message";
         public const string MARK_MSG_FILEPATH = "filepath";
@@ -434,10 +434,14 @@ INIT_FINISHED:
             /*  Message
              * 保存单条信息的结构
              * messagetype：消息类型
-             * sender：发送者wxid；l_sender：`sender`字符数
-             * wxid：如果sender是群聊id，则此成员保存具体发送人wxid，否则与`sender`一致；l_wxid：`wxid`字符数
-             * message：消息内容，非文本消息是xml格式；l_message：`message`字符数
-             * filepath：图片、文件及其他资源的保存路径；l_filepath：`filepath`字符数
+             * sender：发送者wxid；
+             * l_sender：`sender`字符数
+             * wxid：如果sender是群聊id，则此成员保存具体发送人wxid，否则与`sender`一致；
+             * l_wxid：`wxid`字符数
+             * message：消息内容，非文本消息是xml格式；
+             * l_message：`message`字符数
+             * filepath：图片、文件及其他资源的保存路径；
+             * l_filepath：`filepath`字符数
              */
             wx.CStartReceiveMessage();
             ReceiveSleep();
@@ -461,7 +465,7 @@ INIT_FINISHED:
                     {
                         roomType = enums.RoomType.Service;
                     }
-                    else if (sender.EndsWith("@chatroom"))
+                    else if (sender != wxid)
                     {
                         roomType = enums.RoomType.Group;
                     }
