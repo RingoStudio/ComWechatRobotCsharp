@@ -336,7 +336,6 @@ INIT_FINISHED:
             {
                 var hd = wx.CGetDbHandles() as Object[,,];
                 if (hd == null || hd.Length == 0) return result;
-                if (!utils.StringHelper.IsUnsign(hd[0, 1, 1] as string)) return result;
                 var dbPtr = Convert.ToUInt32(hd[0, 1, 1]);
 
                 var sql = "";
