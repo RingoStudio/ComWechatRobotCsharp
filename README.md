@@ -18,7 +18,7 @@ Visual Studio 2022 + .Net 5.0
 
 
 ## 使用前准备
-1. 下载[ComWechatBot的必要文件](https://github.com/ljc545w/ComWeChatRobot/tree/master/Release)
+1. 下载[ComWechatBot的必要文件](https://github.com/RingoStudio/ComWechatRobotCsharp/edit/master/com)
 2. 使用管理员命令行注册或卸载com组件
 ```
 # 安装
