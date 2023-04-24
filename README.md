@@ -1,5 +1,6 @@
 ## 描述
 ### 本项目是 @github/ljc545w 大佬的[ComWechatRobot](https://github.com/ljc545w/ComWeChatRobot) C#版实现
+### 本项目不再维护，之后将使用ljc545w大佬的上述项目的http模式，见[RS.JJJ.Wechat](https://github.com/RingoStudio/RS.JJJ.Wechat)
 
 ### 目前实现以下功能：
 - 获取通讯录
@@ -26,6 +27,7 @@ CWeChatRobot.exe /regserver
 # 卸载
 CWeChatRobot.exe /unregserver
 ```
+3. 准备注入器[WechatInjector](https://github.com/RingoStudio/WechatInjector）
 
 ## 更多功能
 后续计划功能：
