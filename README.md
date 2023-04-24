@@ -27,7 +27,7 @@ CWeChatRobot.exe /regserver
 # 卸载
 CWeChatRobot.exe /unregserver
 ```
-3. 准备注入器[WechatInjector](https://github.com/RingoStudio/WechatInjector）
+3. 准备注入器[WechatInjector](https://github.com/RingoStudio/WechatInjector)
 
 ## 更多功能
 后续计划功能：
